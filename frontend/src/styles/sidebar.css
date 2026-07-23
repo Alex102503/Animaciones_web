@@ -1,0 +1,119 @@
+/* ==========================================
+   SIDEBAR - AGROVISION
+==========================================*/
+
+.sidebar-modern {
+  width: 260px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--surface);
+
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+
+  flex-shrink: 0;
+
+  transition: 0.35s;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-logo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 28px 20px;
+
+  font-size: 1.4rem;
+
+  font-weight: 700;
+
+  color: var(--primary);
+}
+
+.sidebar-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 12px;
+}
+
+.sidebar-menu a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 18px;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  border-radius: 14px;
+
+  transition: 0.3s;
+
+  font-weight: 500;
+}
+
+.sidebar-menu a svg {
+  min-width: 22px;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(34, 197, 94, 0.12);
+
+  color: #16a34a;
+
+  transform: translateX(5px);
+}
+
+.sidebar-menu a.active {
+  background: #22c55e;
+
+  color: white;
+
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+
+  padding: 20px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-footer small {
+  opacity: 0.7;
+}
+
+.sidebar-modern::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-modern::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+
+  border-radius: 20px;
+}
+
+.sidebar-modern::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

@@ -1,0 +1,170 @@
+/* ---------- NOTIFICATION BELL ---------- */
+
+.notification-btn {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+  padding: 8px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.notification-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.notification-panel {
+  position: absolute;
+  right: 0;
+  top: 52px;
+  width: 340px;
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.notification-header {
+  padding: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.notification-header h3 {
+  margin: 0;
+}
+
+.notification-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.notification-item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.notification-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content p {
+  margin: 5px 0;
+  font-size: 0.92rem;
+}
+
+.notification-content small {
+  opacity: 0.65;
+}
+/* ==========================================
+   HEADER
+==========================================*/
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 28px;
+
+  background: var(--surface);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 20;
+}
+
+.header-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+
+  font-weight: 700;
+}
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.05);
+
+  padding: 10px 15px;
+
+  border-radius: 14px;
+}
+
+.search-box input {
+  border: none;
+
+  outline: none;
+
+  background: none;
+
+  margin-left: 10px;
+
+  width: 220px;
+}
+
+.user-avatar {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  cursor: pointer;
+}
+
+.theme-button {
+  cursor: pointer;
+}

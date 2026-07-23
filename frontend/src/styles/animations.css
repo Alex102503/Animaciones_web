@@ -1,0 +1,265 @@
+/* ==========================================
+   AGROVISION ANIMATIONS
+==========================================*/
+
+/* ---------- Fade ---------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Slide Up ---------- */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Slide Left ---------- */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- Scale ---------- */
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- Pulse ---------- */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------- Float ---------- */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Notification ---------- */
+
+@keyframes bellShake {
+  0% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  40% {
+    transform: rotate(15deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  80% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* ---------- Classes ---------- */
+
+.fade-in {
+  animation: fadeIn 0.45s ease;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease;
+}
+
+.slide-left {
+  animation: slideLeft 0.5s ease;
+}
+
+.zoom-in {
+  animation: zoomIn 0.45s ease;
+}
+
+/* ---------- Dashboard Cards ---------- */
+
+.content-card {
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+}
+
+.content-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Buttons ---------- */
+
+button {
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar-modern a {
+  transition:
+    background 0.3s,
+    color 0.3s,
+    padding-left 0.3s;
+}
+
+.sidebar-modern a:hover {
+  padding-left: 20px;
+}
+
+/* ---------- Notification ---------- */
+
+.notification-btn:hover svg {
+  animation: bellShake 0.5s;
+}
+
+/* ---------- Tables ---------- */
+
+.dashboard-table tbody tr {
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+
+.dashboard-table tbody tr:hover {
+  background: rgba(34, 197, 94, 0.08);
+}
+
+/* ---------- Weather ---------- */
+
+.weather-card {
+  animation: slideUp 0.5s;
+}
+
+.weather-header svg {
+  animation: floating 3s infinite;
+}
+
+/* ---------- Status ---------- */
+
+.status {
+  transition: 0.3s;
+}
+
+.status:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Progress ---------- */
+
+.progress-bar {
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+
+.progress-fill {
+  animation: slideLeft 1s;
+}
+
+/* ---------- Charts ---------- */
+
+.chart-card {
+  animation: zoomIn 0.5s;
+}
+
+/* ---------- Dashboard ---------- */
+
+.dashboard-grid > .content-card {
+  animation: fadeIn 0.5s ease;
+}
+
+/* ---------- Scroll ---------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7b7b7;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}

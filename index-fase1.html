@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroVision</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style-fase1.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🌱
+            </div>
+
+            <div class="logo-text">
+                <h1>AgroVision</h1>
+                <p>Dashboard Inteligente de Cultivos</p>
+            </div>
+
+        </div>
+
+        <div class="user">
+
+            <span>👨‍🌾 Supervisor Agrícola</span>
+
+            <div class="avatar">
+                👤
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <ul>
+
+                <li class="active">🏠 Dashboard</li>
+
+                <li>🌱 Cultivo</li>
+
+                <li>📈 Historial</li>
+
+                <li>⚙️ Configuración</li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main>
+
+           <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2>Bienvenido a AgroVision 🌱</h2>
+
+        <p>
+            Supervisa el estado del cultivo mediante animaciones en tiempo real.
+        </p>
+
+    </section>
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>💧 Humedad</h3>
+            <span id="humedad">72%</span>
+        </div>
+
+        <div class="card">
+            <h3>🌡 Temperatura</h3>
+            <span id="temperature">25°C</span>
+        </div>
+
+        <div class="card">
+            <h3>🌿 Estado</h3>
+            <span id="status">Saludable</span>
+        </div>
+
+        <div class="card">
+            <h3>🚨 Alerta</h3>
+            <span id="alert">Sin alertas</span>
+        </div>
+
+    </section>
+
+    <!-- ESCENA -->
+
+    <section class="scene">
+
+        <div class="sky">
+
+            <div class="sun"></div>
+
+            <div class="cloud cloud1"></div>
+
+            <div class="cloud cloud2"></div>
+
+        </div>
+
+        <div class="field">
+
+    <div id="rain"></div>
+
+    <div class="plant" id="plant">
+        🌱
+    </div>
+
+</div>
+
+        <button id="waterButton">
+            💧 Regar
+        </button>
+
+    </section>
+      
+    <!-- ACTIVIDAD --> 
+   <section class="activity">
+
+    <h2>📋 Actividad Reciente</h2>
+
+    <div id="activityList">
+
+        <div class="activity-item">
+            🌱 Sistema iniciado correctamente.
+        </div>
+
+        <div class="activity-item">
+            💧 Humedad estable.
+        </div>
+
+        <div class="activity-item">
+            🌡 Temperatura dentro del rango ideal.
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+        </main>
+
+    </div>
+
+    <script src="script-fase1.js"></script>
+
+</body>
+
+</html>

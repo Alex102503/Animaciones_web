@@ -1,0 +1,465 @@
+/*==============================
+RESET
+==============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  background: #eef5ef;
+}
+
+/*==============================
+HEADER
+==============================*/
+
+.header {
+  height: 80px;
+
+  background: white;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 40px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.logo-icon {
+  font-size: 42px;
+}
+
+.logo h1 {
+  color: #2d6a4f;
+}
+
+.logo p {
+  color: #777;
+
+  font-size: 14px;
+}
+
+.user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  font-weight: 500;
+}
+
+.avatar {
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #2d6a4f;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+}
+
+/*==============================
+LAYOUT
+==============================*/
+
+.container {
+  display: flex;
+
+  min-height: calc(100vh - 80px);
+}
+
+.sidebar {
+  width: 250px;
+
+  background: #1b4332;
+
+  color: white;
+
+  padding: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #2d6a4f;
+
+  transform: translateX(5px);
+}
+
+.active {
+  background: #2d6a4f;
+}
+
+main {
+  flex: 1;
+
+  padding: 40px;
+}
+
+.hero {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero h2 {
+  color: #2d6a4f;
+
+  margin-bottom: 10px;
+}
+/*==============================
+DASHBOARD
+==============================*/
+
+.dashboard {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+
+  color: #2d6a4f;
+}
+
+.card span {
+  font-size: 30px;
+
+  font-weight: bold;
+}
+
+/*==============================
+SCENE
+==============================*/
+
+.scene {
+  margin-top: 35px;
+
+  background: linear-gradient(#bde0fe, #d8f3dc);
+
+  height: 420px;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.sky {
+  height: 75%;
+
+  position: relative;
+}
+
+.sun {
+  width: 90px;
+
+  height: 90px;
+
+  background: #ffd60a;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  right: 60px;
+
+  top: 40px;
+
+  box-shadow: 0 0 40px rgba(255, 214, 10, 0.8);
+}
+
+.cloud {
+  width: 140px;
+
+  height: 55px;
+
+  background: white;
+
+  border-radius: 50px;
+
+  position: absolute;
+}
+
+.cloud1 {
+  top: 70px;
+
+  left: 100px;
+}
+
+.cloud2 {
+  top: 140px;
+
+  left: 320px;
+}
+
+.field {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 130px;
+
+  background: #6a994e;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+}
+
+.plant {
+  font-size: 90px;
+
+  margin-top: -45px;
+}
+
+#waterButton {
+  position: absolute;
+
+  bottom: 25px;
+
+  right: 30px;
+
+  border: none;
+
+  padding: 16px 30px;
+
+  border-radius: 15px;
+
+  background: #2d6a4f;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+#waterButton:hover {
+  transform: scale(1.05);
+}
+/*==============================
+ANIMACIONES
+==============================*/
+
+@keyframes sunRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sun {
+  animation: sunRotate 35s linear infinite;
+}
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.plant {
+  animation: breathe 3s ease-in-out infinite;
+}
+@keyframes cloudMove {
+  from {
+    transform: translateX(-40px);
+  }
+
+  to {
+    transform: translateX(40px);
+  }
+}
+
+.cloud1 {
+  animation: cloudMove 12s ease-in-out infinite alternate;
+}
+
+.cloud2 {
+  animation: cloudMove 18s ease-in-out infinite alternate;
+}
+.card {
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+/*==============================
+ACTIVITY
+==============================*/
+
+.activity {
+  margin-top: 30px;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.activity h2 {
+  color: #2d6a4f;
+
+  margin-bottom: 20px;
+}
+
+.activity-item {
+  padding: 15px;
+
+  margin-bottom: 12px;
+
+  background: #f6fff8;
+
+  border-left: 5px solid #2d6a4f;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.activity-item:hover {
+  transform: translateX(10px);
+}
+@keyframes buttonPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop {
+  animation: buttonPop 0.35s;
+}
+/*==============================
+RAIN
+==============================*/
+
+#rain {
+  position: absolute;
+
+  width: 100%;
+
+  height: 220px;
+
+  top: -80px;
+
+  left: 0;
+
+  pointer-events: none;
+}
+
+.drop {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  background: #4fc3f7;
+  border-radius: 20px;
+  animation: fall 0.8s linear forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-120px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,122 @@
+/* Dashboard Grid Adaptable */
+.dashboard-grid {
+  display: grid;
+  /* Cambiamos el grid para que sea fluido según el espacio */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Ajuste para los gráficos dentro del dashboard */
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Móvil primero */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* En pantallas grandes (cuando el menú está cerrado, hay más espacio) */
+@media (min-width: 1024px) {
+  .charts-container {
+    grid-template-columns: 2fr 1fr;
+    /* Gráfico grande y pequeño */
+  }
+}
+/* ==========================================
+   DASHBOARD EXTRA
+==========================================*/
+
+.dashboard-section {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.dashboard-title {
+  font-size: 1.4rem;
+
+  font-weight: 700;
+}
+
+.metric-card {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.metric-card h2 {
+  font-size: 2rem;
+
+  margin-top: 10px;
+}
+
+.metric-icon {
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.chart-card {
+  min-height: 360px;
+}
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 20px;
+}
+/* FORZAR COLORES EN TARJETAS PARA MODO OSCURO/CLARO */
+.content-card {
+  background-color: var(--surface);
+  color: var(--text-main);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* FORZAR COLORES EN TABLAS */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th {
+  color: var(--text-muted);
+  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+  padding: 15px;
+  text-align: left;
+}
+
+.dashboard-table td {
+  color: var(--text-main);
+  /* ESTO ARREGLA QUE NO SE LEAN LOS DATOS */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  padding: 15px;
+}
+
+/* EFECTO HOVER EN LAS FILAS DE LA TABLA (Más animaciones) */
+.dashboard-table tbody tr {
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: rgba(128, 128, 128, 0.05);
+  transform: scale(1.01);
+}
